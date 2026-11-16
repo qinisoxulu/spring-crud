@@ -8,23 +8,22 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-
-@Table (name = "students")
-
+@Table(name = "students")
 public class StudentEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    @Column (name = "first_name", nullable = false)
-    private String first_name;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
 
-    @Column (name = "last_name", nullable = false)
-    private String last_name;
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
 
-    @Column (name = "student_number", unique = true)
-    private String student_number;
+    @Column(name = "email", nullable = false, unique = true)
+    private String email;
 }
